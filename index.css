@@ -1,0 +1,204 @@
+/* #### Text
+
+- Very dark desaturated blue: hsl(238, 29%, 16%)
+- Soft red: hsl(14, 88%, 65%)
+
+#### Gradient
+
+Background gradient:
+
+- Soft violet: hsl(273, 75%, 66%)
+- Soft blue: hsl(240, 73%, 65%)
+
+### Neutral
+
+#### Text
+
+- Very dark grayish blue: hsl(237, 12%, 33%)
+- Dark grayish blue: hsl(240, 6%, 50%)
+
+#### Dividers
+
+- Light grayish blue: hsl(240, 5%, 91%) */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans',sans-serif;
+    background-image: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    
+}
+
+main {
+  margin-top: -3rem;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.25rem;
+}
+
+p {
+  font-size: 13px;
+}
+
+hr {
+    border-top: 1px solid lightgray;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+hr:last-child {
+  margin-bottom: 3rem;
+}
+
+.container {
+    margin-top: 15rem;
+    margin-bottom: 5rem;
+    border-radius: 20px;
+    background-color: white;
+    width: 375px;
+    max-width: 90%;
+    height: fit-content;
+
+}
+
+
+picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+picture .img-mob {
+    width: 280px;
+    transform: translateY(-60%);  
+    position: relative;
+}
+
+picture .bg-mob {
+  position: absolute;
+  width: 280px;
+  transform: translateY(-50%); 
+}
+
+picture .img-des , .bg-des , .box-des {
+  display: none;
+}
+
+.accordion {
+  font-family: 'Kumbh Sans',sans-serif;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0 2rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  color: hsl(237, 12%, 33%);
+}
+
+.active {
+  font-weight: bold;
+}
+
+.accordion:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+.accordion:after {
+  content: url(/images/icon-arrow-down.svg);
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: url(/images/icon-arrow-down.svg);
+  transform: rotate(180deg);
+
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  color : hsl(240, 6%, 50%);
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  margin-bottom: 1.5rem;
+  padding: 0 2rem;
+}
+
+
+@media (min-width: 1400px) {
+  .container {
+    display: flex;
+    width: 1200px;
+    max-width: 90%;
+    height: 600px;
+
+  }
+
+  main {
+    margin-top: 3rem;
+  }
+
+  picture {
+    width: 50%;
+  }
+
+  picture .img-mob , .bg-mob {
+    display: none;
+  }
+
+  picture .img-des , .bg-des , .box-des {
+    display: inline-block;
+  }
+
+  picture .img-des {
+    position: relative;
+    width: 600px;
+  }
+
+  picture .box-des {
+    width: 200px;
+    position: absolute;
+    transform: translate(-100%, 35%);
+
+  }
+
+  picture .bg-des {
+    position: absolute;
+  }
+
+  picture .bg-des {
+    width: 600px;
+  }
+
+  article {
+    width: 45%;
+    margin-top: 2rem;
+  }
+
+
+}
+
